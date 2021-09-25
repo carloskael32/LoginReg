@@ -28,28 +28,42 @@ formulario que tendra los datos en comun con create y edit
             @endif
 
             <div class="form-group">
+                <label for="nombre1">1er Nombre</label>
+                <input type="text" class="form-control" name="nombre1" value="{{ isset($empleado->nombre1)?$empleado->nombre1:old('nombre1') }}" id="nombre1">
+            </div>
 
-                <label for="Nombre">Nombre</label>
-                <input type="text" class="form-control" name="Nombre" value="{{ isset($empleado->Nombre)?$empleado->Nombre:old('Nombre') }}" id="Nombre">
+            <div class="form-group">
+                <label for="nombre2">2do Nombre</label>
+                <input type="text" class="form-control" name="nombre2" value="{{ isset($empleado->nombre2)?$empleado->nombre2:old('nombre2') }}" id="nombre2">
+            </div>
 
+            <div class="form-group">
+                <label for="apellido1">1er apellido</label>
+                <input type="text" class="form-control" name="apellido1" value="{{ isset($empleado->apellido1)?$empleado->apellido1:old('apellido1') }}" id="apellido1">
 
             </div>
 
             <div class="form-group">
-                <label for="Nombre">Apellido Paterno</label>
-                <input type="text" class="form-control" name="ApellidoPaterno" value="{{ isset($empleado->ApellidoPaterno)?$empleado->ApellidoPaterno:old('ApellidoPaterno') }}" id="ApellidoPaterno">
+                <label for="apellido2">2do apellido</label>
+                <input type="text" class="form-control" name="apellido2" value="{{ isset($empleado->apellido2)?$empleado->apellido2:old('apellido2') }}" id="apellido2">
 
             </div>
 
             <div class="form-group">
-                <label for="Nombre">Apellido Materno</label>
-                <input type="text" class="form-control" name="ApellidoMaterno" value="{{ isset($empleado->ApellidoMaterno)?$empleado->ApellidoMaterno:old('ApellidoMaterno') }}" id="ApellidoMaterno">
+                <label for="genero">genero</label>
+                <input type="text" class="form-control" name="genero" value="{{ isset($empleado->genero)?$empleado->genero:old('genero') }}" id="genero">
 
             </div>
 
             <div class="form-group">
-                <label for="Nombre">Correo</label>
-                <input type="text" class="form-control" name="Correo" value="{{ isset($empleado->Correo)?$empleado->Correo:old('Correo') }}" id="Correo">
+                <label for="nro_celular">nro celular</label>
+                <input type="number" class="form-control" name="nro_celular" value="{{ isset($empleado->nro_celular)?$empleado->nro_celular:old('nro_celular') }}" id="nro_celular">
+
+            </div>
+
+            <div class="form-group">
+                <label for="direccion">direccion</label>
+                <input type="text" class="form-control" name="direccion"  value="{{ isset($empleado->direccion)?$empleado->direccion:old('direccion') }}" id="direccion">
 
             </div>
 

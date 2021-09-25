@@ -12,6 +12,64 @@
                         @csrf
 
                         <div class="form-group row">
+                            <label for="nombre1" class="col-md-4 col-form-label text-md-right">{{ __('1er nombre') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="nombre1" type="text" class="form-control @error('nombre1') is-invalid @enderror" name="nombre1" value="{{ old('nombre1') }}" required autocomplete="nombre1" autofocus>
+
+                                @error('nombre1')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="nombre2" class="col-md-4 col-form-label text-md-right">{{ __('2do nombre') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="nombre2" type="text" class="form-control @error('nombre2') is-invalid @enderror" name="nombre2" value="{{ old('nombre2') }}" required autocomplete="nombre2" autofocus>
+
+                                @error('nombre2')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="apellido1" class="col-md-4 col-form-label text-md-right">{{ __('1er apellido') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="apellido1" type="text" class="form-control @error('apellido1') is-invalid @enderror" name="apellido1" value="{{ old('apellido1') }}" required autocomplete="apellido1" autofocus>
+
+                                @error('apellido1')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+
+                        <div class="form-group row">
+                            <label for="apellido2" class="col-md-4 col-form-label text-md-right">{{ __('2do apellido') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="apellido2" type="text" class="form-control @error('apellido2') is-invalid @enderror" name="apellido2" value="{{ old('apellido2') }}" required autocomplete="apellido2" autofocus>
+
+                                @error('apellido2')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+                        
+
+                        <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
                             <div class="col-md-6">
@@ -25,19 +83,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
+                
 
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
@@ -66,12 +112,13 @@
                                 <button type="submit" class="btn btn-success">
                                     {{ __('Register') }}
                                 </button>
+                                <a class="btn btn-primary" href="{{ url('admin/') }}"> Regresar</a>
                                
                               
                             </div>
                         </div>
                     </form>
-                    <a class="btn btn-primary" href="{{ url('admin/') }}"> Regresar</a>
+                   
                     
                 </div>
             </div>

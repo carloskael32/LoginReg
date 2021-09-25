@@ -7,7 +7,7 @@
 <div class="container-fluid">
     <div class="row justify-content-center">
 
-        <div class="col-md-9">
+        <div class="col-md-12">
 
             <div class="card">
                 <div class="card-header">
@@ -38,20 +38,26 @@
                             <tr>
                                 <th>#</th>
 
-                                <th>Nombre</th>
-
-                                <th>Correo</th>
-                                <th>Contraseña</th>
+                                <th>#</th>
+                                <th>1er nombre</th>
+                                <th>2do nombre</th>
+                                <th>1er apellido</th>
+                                <th>2do apellido</th>
+                             
+                                <th>clave</th>
                                 <th>Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach($empleados as $empleado)
                             <tr>
-                                <td>{{ $empleado->id }}</td>
-
+                            <td>{{ $empleado->id }}</td>
+                                <td>{{ $empleado->nombre1 }}</td>
+                                <td>{{ $empleado->nombre2 }}</td>
+                                <td>{{ $empleado->apellido1 }}</td>
+                                <td>{{ $empleado->apellido2 }}</td>
                                 <td>{{ $empleado->name }}</td>
-                                <td>{{ $empleado->email }}</td>
+                                
                                 <td>{{ $empleado->password }}</td>
 
                                 <td>

@@ -17,7 +17,7 @@ class EmpleadoController extends Controller
     public function index()
     {
         //
-        $datos['empleados'] = Empleado::paginate(2);
+        $datos['empleados'] = Empleado::paginate(5);
         return view('empleado.index', $datos);
     }
 
@@ -40,12 +40,17 @@ class EmpleadoController extends Controller
      */
     public function store(Request $request)
     {
+
         $campos = [
-            'Nombre' => 'required|string|max:100',
-            'ApellidoPaterno' => 'required|string|max:100',
-            'ApellidoMaterno' => 'required|string|max:100',
-            'Correo' => 'required|email',
-            'Foto' => 'required|max:10000|mimes:jpeg,png,jpg',
+            'nombre1' => 'required|string|max:100',
+            'nombre2' => 'required|string|max:100',
+            'apellido1' => 'required|string|max:100',
+            'apellido2' => 'required|string|max:100',
+            'genero' => 'required|max:100',
+            'nro_celular' => 'required|max:100',
+            'direccion' => 'required|string|max:100',
+
+            'Foto' => 'max:10000|mimes:jpeg,png,jpg',
         ];
         $mensaje = [
             'required' => 'El :attribute es requerido',
@@ -107,10 +112,13 @@ class EmpleadoController extends Controller
     {
 
         $campos = [
-            'Nombre' => 'required|string|max:100',
-            'ApellidoPaterno' => 'required|string|max:100',
-            'ApellidoMaterno' => 'required|string|max:100',
-            'Correo' => 'required|email',
+            'nombre1' => 'required|string|max:100',
+            'nombre2' => 'required|string|max:100',
+            'apellido1' => 'required|string|max:100',
+            'apellido2' => 'required|string|max:100',
+            'genero' => 'required|max:100',
+            'nro_celular' => 'required|max:100',
+            'direccion' => 'required|string|max:100',
 
         ];
         $mensaje = [

@@ -7,7 +7,7 @@
 <div class="container-fluid">
     <div class="row justify-content-center">
 
-        <div class="col-md-9">
+        <div class="col-md-12">
 
             <div class="card">
                 <div class="card-header">
@@ -37,11 +37,14 @@
                         <thead class="thead-light">
                             <tr>
                                 <th>#</th>
+                                <th>1er nombre</th>
+                                <th>2do nombre</th>
+                                <th>1er apellido</th>
+                                <th>2do apellido</th>
+                                <th>Genero</th>
+                                <th>Nro Celular</th>
+                                <th>Direccion</th>
                                 <th>Foto</th>
-                                <th>Nombre</th>
-                                <th>Apellido Paterno</th>
-                                <th>Apellido Materno</th>
-                                <th>Correo</th>
                                 <th>Acciones</th>
                             </tr>
                         </thead>
@@ -49,15 +52,21 @@
                             @foreach($empleados as $empleado)
                             <tr>
                                 <td>{{ $empleado->id }}</td>
+                                <td>{{ $empleado->nombre1 }}</td>
+                                <td>{{ $empleado->nombre2 }}</td>
+                                <td>{{ $empleado->apellido1 }}</td>
+                                <td>{{ $empleado->apellido2 }}</td>
+                                <td>{{ $empleado->genero }}</td>
+                                <td>{{ $empleado->nro_celular }}</td>                                
+                                <td>{{ $empleado->direccion }}</td>
+                       
+                           
                                 <td>
                                     <img class="img-thumbnail img-fluid" src="{{ asset('storage').'/'.$empleado->Foto }}" width="200" alt="">
 
                                     <!--  {{ $empleado->Foto }} -->
                                 </td>
-                                <td>{{ $empleado->Nombre }}</td>
-                                <td>{{ $empleado->ApellidoPaterno }}</td>
-                                <td>{{ $empleado->ApellidoMaterno }}</td>
-                                <td>{{ $empleado->Correo }}</td>
+                           
                                 <td>
 
                                     <a href="{{ url('/empleado/'.$empleado->id.'/edit') }}" class="btn btn-warning">
